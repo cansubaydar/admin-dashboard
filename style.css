@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-primary: #0f172a;
+  --color-secondary: #f1f5f9;
+  --color-accent: #e2e8f0;
+  --color-light: #3b82f6; 
+  --color-dark: #1d4ed8;
+}
+
+body {
+  max-width: 100%;
+  min-height: 100vh;
+  font-family: 'Quicksand', sans-serif;
+  background-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: min-content auto;
+  height: 100vh;
+}
+
+.header {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  color: var(--color-secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding: 24px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-icon {
+  width: 42px;
+}
+
+.icon {
+  width: 24px;
+  padding: 8px 16px 8px 8px;
+}
+
+.menu ul li{
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.navbar {
+  grid-column: 2 / -1;
+  background-color: var(--color-secondary);
+  box-shadow: #0f172a60 0px 5px 10px -5px;
+  z-index: 1;
+}
+
+.nav-items-1 {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  padding: 16px 40px 16px 32px;
+  align-items: center;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.search input {
+  width: 100%;
+  padding: 8px 16px;
+  border: 1px solid #0f172a3b;
+  border-radius: 15px;
+  outline: none;
+  background-color: var(--color-secondary);
+}
+
+.account {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.avatar {
+  width: 50px;
+  height: auto;
+  border-radius: 40px;
+}
+
+.nav-items-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;  
+  align-items: center;
+  padding: 0 32px 16px 32px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+}
+
+.profile .avatar {
+  width: 75px;
+}
+
+.profile-message {
+  flex-direction: column;
+  font-weight: 700;
+  padding-left: 22px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.buttons a {
+  background-color: var(--color-dark);
+  color: var(--color-secondary);
+  padding: 12px 24px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.buttons a:hover {
+  opacity: 0.9;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  background-color: var(--color-accent);
+  padding: 16px 0 32px 0;
+}
+
+.main h3 {
+  font-size: 18px;
+  padding-bottom: 16px;
+}
+
+.projects {
+  padding: 16px 24px;
+}
+
+.projects .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 22px 18px;
+}
+
+.projects .card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-secondary);
+  border-left: var(--color-light) 10px solid;
+  box-shadow: #0f172a35 0px 2px 5px -1px, #0f172a35 0px 1px 3px -1px;
+  padding: 32px 24px 24px 24px;
+  border-radius: 10px;
+}
+
+.projects .title {
+  font-size: 16px;
+  font-weight: 700;
+  padding-bottom: 1px;
+}
+
+.projects p:nth-child(2) {
+  font-size: 14px;
+}
+
+.card .card-icons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+  padding-top: 24px;
+}
+
+.card-icons img {
+  width: 22px;
+  padding: 8px 16px 8px 8px;
+}
+ 
+.navbar .icon, 
+.main .card-icons {
+  cursor: pointer;
+}
+
+.side-bar {
+  grid-column: 2 / -1;
+}
+
+.announcements,
+.trending {
+  padding: 16px 32px 8px 0;
+}
+
+.announcement-group, 
+.trend-accounts {
+  background-color: var(--color-secondary);
+  box-shadow: #0f172a60 0px 5px 10px -5px;
+  border-radius: 10px;
+}
+
+.announcement-group {
+  padding: 32px 24px;
+}
+
+.announcement-group .card:nth-child(2) {
+  border-top: 1px solid #0f172a35;
+  border-bottom: 1px solid #0f172a35;
+  padding: 16px 0;
+  margin: 16px 0;
+}
+
+.announcements .title {
+  font-size: 14px;
+  font-weight: 700; 
+}
+
+.announcements p:nth-child(2) {
+  font-size: 12px;
+}
+
+.trend-accounts {
+  padding: 16px 24px;
+}
+
+.trend-card {
+  display: flex;
+  align-items: center;
+  padding: 6px 0;
+}
+
+.trend-card .users {
+  padding-left: 8px;
+}
+
+.users .username, 
+.users .project-name {
+  font-size: 14px;
+}
+
+.users .username {
+  font-weight: 600;
+}
+
+.users .project-name {
+  font-weight: 300;
+}
